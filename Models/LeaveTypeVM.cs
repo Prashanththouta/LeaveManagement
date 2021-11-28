@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LeaveManagement.Models
 {
-    public class DetailsLeaveTypeVM
+    public class LeaveTypeVM
     {
 
         public int Id { get; set; }
@@ -14,12 +14,8 @@ namespace LeaveManagement.Models
         [Required]
         public string Name { get; set; }
 
-        public DateTime DateCreated { get; set; }
+        [Display(Name="Date Created")]
+        public DateTime? DateCreated { get; set; }
     }
-    public class CreateLeaveTypeVM
-    {
-        [Required]
-        public string Name { get; set; }
-
-    }
+   
 }
