@@ -7,7 +7,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">
+    <a asp-action="Create" class="btn btn-success">
         <i class="bi bi-plus-lg"></i>
         Create New
     </a>
@@ -21,7 +21,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.DateCreated)
             </th>
-            <th></th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -34,14 +34,14 @@
                 @Html.DisplayFor(modelItem => item.DateCreated)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">
+                <a class="btn btn-warning"  asp-action="Edit" asp-route-id="@item.Id">
                     <i class="bi bi-pencil"></i>
                     Edit
-                </a> |
-                <a asp-action="Details" asp-route-id="@item.Id">
+                </a> 
+                <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">
                     <i class="bi bi-border-all"></i>
-                Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure, You want to delete this record?')" >
+                Details</a> 
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure, You want to delete this record?')" >
                     <i class="bi bi-trash"></i>
                 Delete</a>
             </td>
@@ -51,8 +51,6 @@
 </table>
 @section scripts {
 <script>
-    $(document).ready(function () {
-        $('#lt-data').DataTable();
-    });
+ 
 </script>
 }
